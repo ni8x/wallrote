@@ -1,17 +1,14 @@
-# WalleRotator 🖼️
+# WallRote 🖼️
 
 A lightweight, zero-dependency Windows desktop wallpaper rotator written in Python. It runs invisibly in the background, consuming practically zero CPU/RAM, and automatically updates your desktop background at a customizable interval.
 
 ## ✨ Features
 
-- **Reddit Integration**: Automatically scrapes the "Top 10 of the day" posts from any subreddit (e.g., `r/wallpapers`, `r/EarthPorn`) and sets a random high-quality image as your desktop background.
-- **Local Folder Support**: Prefer your own images? You can easily configure it to randomly cycle through a local folder of `.jpg` or `.png` files instead.
-- **Zero-Dependency Core**: Uses native Windows `ctypes` (`SystemParametersInfoW`) to change the background without needing heavy 3rd-party libraries.
-- **Fully Portable & Universal**: 
-  - Automatically resolves to your universal `Pictures` folder (`C:\Users\YourUser\Pictures\WalleRotator`) to store configs and downloads.
-  - Automatically adds itself to the Windows Startup folder on the very first run.
-- **JSON Configuration**: Highly customizable via a simple `config.json` file.
-
+*   **Reddit & Local Support**: Cycle through your own photos or automatically grab top-tier shots from subreddits like `r/EarthPorn`.
+*   **Invisible & Efficient**: Written in Python using `ctypes` to talk directly to Windows—no heavy libraries, no open terminal windows.
+*   **Zero Setup**: On the first run, it creates its own folders in your `Pictures` directory and adds itself to your Windows Startup automatically.
+*   **Simple Config**: Everything from the subreddit source to the rotation interval is handled in a clean `config.json`.
+*   
 ## ⚙️ Configuration
 
 When you run the script for the first time, it will automatically generate a `config.json` file in your `Pictures\WalleRotator` folder. 
@@ -38,14 +35,7 @@ python wallpaper_rotator.pyw
 *(Note: the `.pyw` extension ensures it runs in the background without opening a visible command prompt window).*
 
 ### Option 2: Run as a Portable Executable
-You can compile this script into a standalone `.exe` so you can share it with friends who don't have Python installed.
-
-1. Install PyInstaller:
-```bash
-pip install pyinstaller
-```
-2. Build the `.exe`:
-```bash
-pyinstaller --noconsole --onefile --name wallrote wallpaper_rotator.pyw
-```
-3. Your portable executable will be generated in the `dist/` folder. Just double-click `wallrote.exe` and it will automatically handle the rest, including adding itself to your Windows Startup!
+If you just want it to work without touching any code:
+1.  Go to the **[Releases](https://github.com/ni8x/wallrote/releases)** section of this repo.
+2.  Download `wallrote.exe`.
+3.  Double-click to run. It will handle the rest.
