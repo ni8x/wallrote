@@ -1,0 +1,13 @@
+# PyInstaller folders and files
+build/
+dist/
+*.spec
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Project specific (if any are left over in the folder)
+wallpapers/
+config.json
